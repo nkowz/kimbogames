@@ -18,7 +18,19 @@ function openGame(gameId) {
     const modal = document.getElementById("gameModal");
     const iframe = document.getElementById("gameIframe");
 
-    if (gameId === 'block-blast') {
+    // New game links
+    if (gameId === 'triple-cars') {
+        iframe.src = "https://cdn.htmlgames.com/TripleCars/";
+    } else if (gameId === 'goblin-run') {
+        iframe.src = "https://cdn.htmlgames.com/GoblinRun/";
+    } else if (gameId === 'merge-cards') {
+        iframe.src = "https://cdn.htmlgames.com/MergeCards/";
+    } else if (gameId === 'tetrix') {
+        iframe.src = "https://cdn.htmlgames.com/Tetrix/";
+    }
+
+    // Old game links
+    else if (gameId === 'block-blast') {
         iframe.src = "https://cloud.onlinegames.io/games/2024/unity3/block-blast/index-og.html";
     } else if (gameId === 'snake-football') {
         iframe.src = "https://www.onlinegames.io/games/2023/construct/200/snake-football/index.html";
