@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">🎮 Game Portal</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#games">Games</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Game Portal</h1>
+        <p>Explore the best online games!</p>
+        <button onclick="scrollToSection('games')">Discover Games</button>
+    </section>
+
+    <!-- Game Sorting and Cards -->
+    <section id="games" class="games-section">
+        <h2>Games</h2>
+        <div class="filter">
+            <button onclick="filterGames('all')">All</button>
+            <button onclick="filterGames('action')">Action</button>
+            <button onclick="filterGames('puzzle')">Puzzle</button>
+            <button onclick="filterGames('adventure')">Adventure</button>
+        </div>
+        <div class="game-list">
+            <!-- Game Cards -->
+            <div class="game-card" data-genre="puzzle" onclick="openGame('block-blast')">
+                <img src="https://www.onlinegames.io/media/posts/876/responsive/block-blast-lg.jpg" alt="Block Blast">
+                <h3>Block Blast</h3>
+                <p>A fun and challenging puzzle game!</p>
+            </div>
+
+            <div class="game-card" data-genre="action" onclick="openGame('snake-football')">
+                <img src="https://www.onlinegames.io/media/posts/706/responsive/Snake-Football-lg.jpg" alt="Snake Football">
+                <h3>Snake Football</h3>
+                <p>Combine snakes and football in this exciting action game!</p>
+            </div>
+
+            <div class="game-card" data-genre="action" onclick="openGame('police-chase-drifter')">
+                <img src="https://www.onlinegames.io/media/posts/155/responsive/Police-Chase-Drifter-Online-lg.jpg" alt="Police Chase Drifter">
+                <h3>Police Chase Drifter</h3>
+                <p>Escape the cops in this thrilling action-packed game!</p>
+            </div>
+
+            <div class="game-card" data-genre="adventure" onclick="openGame('real-flight-simulator')">
+                <img src="https://www.onlinegames.io/media/posts/342/responsive/Real-Flight-Simulator-2-lg.jpg" alt="Real Flight Simulator">
+                <h3>Real Flight Simulator</h3>
+                <p>Take off and explore the skies in this realistic flight simulator.</p>
+            </div>
+
+            <div class="game-card" data-genre="action" onclick="openGame('geometry-escape')">
+                <img src="https://www.onlinegames.io/media/posts/905/responsive/Geometry-Escape-lg.jpg" alt="Geometry Escape">
+                <h3>Geometry Escape</h3>
+                <p>Navigate through challenging geometric puzzles!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe id="gameIframe" src="" width="800" height="600" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Game Portal. All rights reserved.</p>
+        <p>Follow us on:
+            <a href="#">Twitter</a> | 
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
